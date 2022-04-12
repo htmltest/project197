@@ -25,7 +25,10 @@ body {min-width:480px; margin:0; padding:0; text-align:center; font:500 22px/33p
 .text {padding:40px 0 0 0; margin:0 auto; max-width:740px}
 
 .logos {padding:40px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
-.logos-item {display:inline-block; vertical-align:top; width:276px; height:207px; margin:0 30px; border:1px solid #fff; line-height:205px}
+.logos-item {display:inline-block; vertical-align:top; width:276px; height:207px; margin:0 30px; border:1px solid #fff; line-height:205px; text-decoration:none; color:#fff; position:relative; overflow:hidden; transition:transform 0.2s}
+.logos-item:hover {transform:translateY(-5px)}
+.logos-item::before {content:""; display:block; background:#fff; height:355px; left:-175px; opacity:0.2; position:absolute; top:-80px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
+.logos-item:hover::before {left:140%}
 .logos-item img {display:inline-block; vertical-align:middle}
 
 @media (max-width:1024px) {
